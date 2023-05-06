@@ -1,9 +1,8 @@
 import {render} from 'react-dom';
-import {Couter} from "./components/Couter";
+import {Counter} from "./components/Counter";
+import App from "./App";
 
 render(
-    <div>
-        <Couter/>
-    </div>,
+    <App/>,
     document.getElementById('root')
 )
