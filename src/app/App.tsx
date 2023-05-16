@@ -1,4 +1,6 @@
-import React, { Suspense, useContext, useState } from 'react';
+import React, {
+  Suspense, useContext, useEffect, useState,
+} from 'react';
 import './styles/index.scss';
 
 import { useTheme } from 'app/providers/ThemeProvider';
