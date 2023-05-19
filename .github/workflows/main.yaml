@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 jobs:
   pipeline: # может быть любое название
-    runs-on: ubuntu-latest # запускать на ubuntu последней версии
+    runs-on: macos-latest # запускать на ubuntu последней версии
     strategy:
       matrix:
         node-version: [ 17.x ]
