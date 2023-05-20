@@ -1,34 +1,30 @@
 name: linting, testing, building
-# запускать на пуш и пулл-реквест в мастер
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 jobs:
-  pipeline: # может быть любое название
-    runs-on: macos-latest # запускать на ubuntu последней версии
+  pipeline:
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ ubuntu-latest ]
         node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v2
 
-      # устанавливаем на машину ноду указанной версии
       - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-      # устанавливаем зависимости
       - name: install modules
-        run: npm install
+        run: npm ci
 
-      # собираем проект
       - name: build production project
         run: npm run build:prod
 
-      # запускаем проверки
       - name: linting typescript
         run: npm run lint:ts
       - name: linting css
