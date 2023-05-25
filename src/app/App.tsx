@@ -1,7 +1,6 @@
 import React, {
-  Suspense, useContext, useEffect, useState,
+  Suspense,
 } from 'react';
-import './styles/index.scss';
 
 import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classnames/classNames';
