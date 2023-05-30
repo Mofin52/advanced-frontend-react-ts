@@ -11,9 +11,12 @@
   "throw error": "throw error",
   "Короткий язык": "Ru",
   "Войти": "Войти",
+  "Выйти": "Выйти",
   "Lorem ipsum": "Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet",
   "increment": "увеличить",
   "decrement": "уменьшить",
   "Введите username": "Введите username",
-  "Введите пароль": "Введите пароль"
+  "Введите пароль": "Введите пароль",
+  "Форма авторизации": "Форма авторизации",
+  "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль"
 }
