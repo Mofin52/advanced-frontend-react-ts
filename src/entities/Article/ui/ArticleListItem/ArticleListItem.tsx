@@ -40,7 +40,7 @@ export const ArticleListItem = memo(({ className, article, view }: ArticleListIt
   );
 
   if (view === ArticleView.BIG) {
-    const textBlock = article.blocks.find((block) => block.type = ArticleBlockType.TEXT) as ArticleTextBlock;
+    const textBlock = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
 
     return (
       <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
