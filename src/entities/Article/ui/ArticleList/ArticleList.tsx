@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classnames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -22,16 +21,6 @@ const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL
 export const ArticleList = memo(({
   className, articles, isLoading, view = ArticleView.SMALL,
 }: ArticleListProps) => {
-  const { t } = useTranslation();
-
-  if (isLoading) {
-    return (
-      <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-        {getSkeletons(view)}
-      </div>
-    );
-  }
-
   const renderArticle = (article: Article) => (
     <ArticleListItem article={article} view={view} className={cls.card} key={article.id} />
   );
@@ -39,6 +28,7 @@ export const ArticleList = memo(({
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
       {articles.length > 0 ? articles.map(renderArticle) : null}
+      {isLoading && getSkeletons(view)}
     </div>
   );
 });
