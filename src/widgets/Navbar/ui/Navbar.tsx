@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useState } from 'react';
-import { classNames } from 'shared/lib/classnames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';

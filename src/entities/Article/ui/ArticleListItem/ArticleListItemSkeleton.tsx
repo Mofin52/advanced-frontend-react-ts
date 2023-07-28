@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classnames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { Card } from 'shared/ui/Card/Card';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
@@ -10,13 +10,15 @@ interface ArticleListItemSkeletonProps {
     view: ArticleView;
 }
 
-export const ArticleListItemSkeleton = memo(({ className, view }: ArticleListItemSkeletonProps) => {
+export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps) => {
+  const { className, view } = props;
+
   if (view === ArticleView.BIG) {
     return (
       <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
         <Card className={cls.card}>
           <div className={cls.header}>
-            <Skeleton height={30} width={30} border="50%" />
+            <Skeleton border="50%" height={30} width={30} />
             <Skeleton width={150} height={16} className={cls.username} />
             <Skeleton width={150} height={16} className={cls.date} />
           </div>

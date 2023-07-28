@@ -11,7 +11,6 @@ describe('articleDetails.test', () => {
       id: '1',
       title: 'subtitle',
     };
-
     const state: DeepPartial<StateSchema> = {
       articleDetails: {
         data,
@@ -45,6 +44,6 @@ describe('articleDetails.test', () => {
   });
   test('should work with empty state isLoading', () => {
     const state: DeepPartial<StateSchema> = {};
-    expect(getArticleDetailsIsLoading(state as StateSchema)).toEqual(undefined);
+    expect(getArticleDetailsIsLoading(state as StateSchema)).toEqual(false);
   });
 });
