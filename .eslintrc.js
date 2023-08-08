@@ -19,6 +19,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'alexvelix-eslint-plugin',
   ],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
@@ -43,6 +44,7 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'arrow-body-style': 'off',
+    'alexvelix-eslint-plugin/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,
