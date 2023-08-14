@@ -42,6 +42,15 @@ module.exports = {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
+  reporters: [
+    'default',
+    ['jest-html-reporters', {
+      publicPath: '<rootDir>/reports/unit',
+      filename: 'report.html',
+      // openReport: true,
+      inlineSource: true,
+    }],
+  ],
   // The root directory that Jest should scan for tests and modules within
   rootDir: '../../',
   // The test environment that will be used for testing
