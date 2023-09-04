@@ -24,7 +24,7 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import {
   getProfileValidateErrors,
 } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
-import { ValidateProfileError } from '../..';
+import { ValidateProfileError } from '../../model/consts/consts';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 
