@@ -10,7 +10,7 @@ import { ArticleDetailsSchema } from 'entities/Article';
 import {
   ArticleDetailsPageSchema,
 } from 'pages/ArticleDetailsPage';
-import { AddCommentFormSchema } from 'features/AddCommentForm';
+import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { UISchema } from 'features/UI';
 import { rtkApi } from 'shared/api/rtkApi';
