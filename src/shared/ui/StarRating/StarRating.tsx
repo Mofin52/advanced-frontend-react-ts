@@ -20,7 +20,7 @@ export const StarRating = memo(({
   const { t } = useTranslation();
 
   const [isHovered, setIsHovered] = useState(false);
-  const [currentStarsCount, setCurrentStarsCount] = useState(0);
+  const [currentStarsCount, setCurrentStarsCount] = useState(selectedStars);
   const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
 
   const onHover = (starsCount: number) => () => {
