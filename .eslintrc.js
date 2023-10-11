@@ -45,6 +45,7 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'arrow-body-style': 'off',
     'alexvelix-eslint-plugin/path-checker': ['error', { alias: '@' }],
+    'alexvelix-eslint-plugin/public-api-imports': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,
