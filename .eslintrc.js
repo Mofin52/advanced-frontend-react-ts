@@ -46,6 +46,8 @@ module.exports = {
     'arrow-body-style': 'off',
     'alexvelix-eslint-plugin/path-checker': ['error', { alias: '@' }],
     'alexvelix-eslint-plugin/public-api-imports': ['error', { alias: '@', testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'] }],
+    'alexvelix-eslint-plugin/layer-imports': ['error', { alias: '@', ignoreImportPatterns: ['**/StoreProvider', '**/testing'] }],
+
   },
   globals: {
     __IS_DEV__: true,
