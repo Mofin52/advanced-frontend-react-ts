@@ -20,6 +20,7 @@ module.exports = {
     'i18next',
     'react-hooks',
     'alexvelix-eslint-plugin',
+    'unused-imports',
   ],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
@@ -47,7 +48,7 @@ module.exports = {
     'alexvelix-eslint-plugin/path-checker': ['error', { alias: '@' }],
     'alexvelix-eslint-plugin/public-api-imports': ['error', { alias: '@', testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'] }],
     'alexvelix-eslint-plugin/layer-imports': ['error', { alias: '@', ignoreImportPatterns: ['**/StoreProvider', '**/testing'] }],
-
+    'unused-imports/no-unused-imports': 'error',
   },
   globals: {
     __IS_DEV__: true,
